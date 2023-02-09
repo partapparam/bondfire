@@ -19,7 +19,7 @@ const User = require("./user.model")
  * New form Submission
  * Create new user
  */
-app.post("/new", async (req, res) => {
+app.post("/api/new", async (req, res) => {
   const body = req.body
   console.log(body)
   const user = {
@@ -37,7 +37,10 @@ app.post("/new", async (req, res) => {
   }
 })
 
-app.get("/admin/all")
+/**
+ * Is this route necessary? How to safeguard this information without any auth.
+ */
+// app.get("/admin/all")
 
 /**
  * Handle all failed routing that do not match
